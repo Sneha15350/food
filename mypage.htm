@@ -10,18 +10,83 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.mySlides {display: none;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+/* Caption text */
+.text1 {
+  float:left
+  color: black;
+  font-size: 45px;
+  background-color:white;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 560px;
+  text-align: center;
+}
+.text2 {
+  float:left
+  color: black;
+  font-size: 45px;
+  background-color:white;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 480px;
+  text-align: center;
+}
+.text3 {
+  float:left
+  color: black;
+  font-size: 45px;
+  background-color:white;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 400px;
+  text-align: center;
+}
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
 header {
   background-color: #0B0633;
   padding:40px;
-  text-align: center;
-  font-size: 20px;
+  font-size: 25px;
   color: white;
 }
 .header img {
   float: left;
   width: 300px;
   height: 80px;
-  margin-top:-50px;
+  margin-top:-40px;
   margin-left:-40px;
 }
 .icon-bar {
@@ -34,7 +99,7 @@ header {
   float: left;
   width: 20%;
   text-align: center;
-  padding: 12px 0;
+  padding: 8px 0;
   transition: all 0.3s ease;
   color: white;
   font-size: 36px;
@@ -52,78 +117,13 @@ header {
 h1, h2 {
   font-family: 'Crete Round', serif;
 }
-  a{text-decoration:none;}
-.content{
-  background:#e6e2c8;
-  width: 80%;
-  max-width: 500px;
-  min-height: 4.750em; 
-  margin: 2em auto;
-  padding: 1.250em;
-  border-radius: 0.313em;
-  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.5);
-  line-height: 1.5em;
-  color: #292929;
-}
+a{text-decoration:none;}
 
-.ribbon{
-  position:relative;
-  padding: 0 0.5em;
-  font-size:2.000em;
-  margin: 0 0 0 -0.625em;
-  line-height: 1.875em;
-  color: white;
-  border-radius: 0 0.156em 0.156em 0;
-  background-color: brown;
-  box-shadow: -1px 2px 3px rgba(0,0,0,0.5);
-}
-
-.ribbon:before, .ribbon:after{
-  position:absolute;
-  content: '';
-  display: block;
-}
-
-.ribbon:before{
-  width: 0.469em;
-  height: 100%;
-  padding: 0 0 0.438em;
-  top:0;
-  left: -0.469em;
-  background:inherit;
-  border-radius: 0.313em 0 0 0.313em;
-}
-
-.ribbon:after{
-  width: 0.313em;
-  height: 0.313em;
-  background: rgba(0,0,0,0.35);
-  bottom: -0.313em;
-  left: -0.313em;
-  border-radius: 0.313em 0 0 0.313em;
-  box-shadow: inset -1px 2px 2px rgba(0,0,0,0.3);
-}
-
-@media (max-width: 600px) {
-  
-  body{
-    font-size:0.875em;
-  }
-  
-  .ribbon{
-    line-height: 1.143em;
-    padding: 0.5em;
-  }
-  
-  .ribbon:before, .ribbon:after{
-    font-size: 0.714em;
-  }
-  
-}
 body{
-background-image: url('pann.jpg');
+background-image: url('wood.png');
   background-repeat: no-repeat;
-  background-size: cover;}
+  background-size: cover;
+}
 .mid{
   height:550px;
   display: flex;
@@ -140,6 +140,7 @@ background-image: url('pann.jpg');
   cursor: pointer;
   width: 100%;
   font-size: 16px;
+  font-family:cursive;
 }
 </style>
 </head>
@@ -148,25 +149,54 @@ background-image: url('pann.jpg');
 <div class="header img">
 <img src="food.png">
 </div>
-  <h3 style="float:right;margin-top:-10px">Call us on | 1234567890</h3>
+<h3 style="float:right;margin-top:-10px">Call us on | 1234567890</h3>
 </header>
 <div class="icon-bar">
   <a class="active" href="#"><i class="fa fa-home"></i></a> 
   <a href="Amritsari soya.htm"><i class="fa fa-search"></i></a> 
   <a href="mailto:challa.chitty@gamil.com"><i class="fa fa-envelope"></i></a> 
   <a href="https://www.instagram.com/mystery_flavours_123/" target="_blank"><i class="fa fa-instagram"></i></a>
-  <a href="#">Help</a>  
+  <a href="#">Help</a> 
 </div>
+<br>
 <div class="mid">
-<div class="content">
-  <h1 class="ribbon">Mystery Flavours</h1>
-  <p>Life is short-Lick the bowl!</p>
-  <p>Spending 30 minutes in the kitchen preparing dinner will put me in a much calmer, less frazzled mood than sitting on the couch for the same amount of time.<br>Plus it gives me an opportunity to nurture my family and friends. To express my love and take care of them:)</p>
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img src="pan.jpg" style="width:100%">
+  <div class="text1" style="background-color:rgba(255,255,255,.6);"><b>MYSTERY FLAVOURS</b></div>
+  <div class="text2" style="background-color:rgba(255,255,255,.6);"><b>LIFE IS SHORT</b></div>
+  <div class="text3" style="background-color:rgba(255,255,255,.6);"><b>JUS LICK THE BOWL</b></div>
+</div>
+
+<div class="mySlides fade">
+  <img src="pho.jpg" style="width:100%">
+  <div class="text1" style="background-color:rgba(255,255,255,.6);"><b>MYSTERY FLAVOURS<b></div>
+  <div class="text2" style="background-color:rgba(255,255,255,.6);"><b>LIFE IS SHORT</b></div>
+  <div class="text3" style="background-color:rgba(255,255,255,.6);"><b>JUS LICK THE BOWL</b></div>
+</div>
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  slides[slideIndex-1].style.display = "block";  
+  setTimeout(showSlides, 2500); // Change image every 2 seconds
+}
+</script>
+<br>
+<div style="font-size:140%;background-color:rgba(255,255,255,.6);padding:15px;">
+<h3 float="left">WHY DO I COOK</h3>
+<p>.............................................................................................................................................................................</p>
+<p><i>Spending 30 minutes in the kitchen preparing dinner will put me in a much calmer, less frazzled mood than sitting on the couch for the same amount of time.<br>Plus it gives me an opportunity to nurture my family and friends. To express my love and take care of them:)</i></p>
 </div>
 </div>
-<div class="foot">
-<h2>|| THANK YOU ||</h2>
-</div>
-</footer>
 </body>
 </html>
