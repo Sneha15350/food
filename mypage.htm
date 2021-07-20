@@ -10,11 +10,6 @@
   padding: 0;
   box-sizing: border-box;
 }
- .stepwizard-row {
-        background: linear-gradient(to right, #c4d7e6 0, #c4d7e6 33%, #66a5ad 33%, #66a5ad 66%, #ff0000 66%, #ff0000 100%);
-        padding: 25px;
-         z-index: 999;
-    }
 .mySlides {display: none;}
 
 /* Slideshow container */
@@ -156,6 +151,66 @@ background-image: url('wa3.png');
   align-items: center;
   position:relative;
 }
+  
+  ul{
+  position:absolute;
+  margin:0;
+  padding:0;
+}
+
+li{
+  text-align:center;
+  display:inline-block;
+  list-style:none;
+  position:relative;
+  border:solid 12px #fff;
+  background:#fff;
+  box-shadow:0 0 15px 0px #555;
+  transition:all 1s ease;
+  -o-transition:all 1s ease;
+  -moz-transition:all 1s ease;
+  -webkit-transition:all 1s ease;
+  top:50px;
+}
+
+
+li:hover{
+  top:0px;
+  opacity:0.5;
+}
+
+li:nth-child(1){
+    transform:rotate(10deg);
+}
+
+li:nth-child(2){
+    transform:rotate(0deg);
+}
+
+li:nth-child(3){
+    transform:rotate(-10deg);
+}
+
+li:nth-child(4){
+    transform:rotate(20deg);
+}
+
+p{
+  margin:-15px 0 0 0;
+}
+
+.light{
+  border-radius:50%;
+  position:absolute;
+  left:0;
+  right:0;
+  width:700px;
+  height:700px;
+  background:#fff;
+  filter:blur(100px);
+  opacity:0.3;
+  pointer-events:none;
+}
 .foot {
   position: fixed;
    left: 0;
@@ -234,11 +289,17 @@ function myFunction() {
   </div>
    <hr>
   <br><br>
-  <div class="stepwizard-row">
-    <p style="float:left;padding:50px 0;color:white;font-size:2vw;">Italian</p>
-  <p style="text-align:center;padding:50px 0;color:white;font-size:2vw;">Indian</p>
-    <p style="float:right;padding:50px 30px;text-align:right;color:white;font-size:2vw;">French</p>
-</div>
+ <ul>
+  <li><img src="china.png" width="200">
+    <p>Chinese</p></li>
+  <li><img src="italy.png" width="200"/>
+    <p>Italian</p></li>
+  <li><img src="north.png" width="200"/>
+    <p>North Indian</p></li>
+  <li><img src="south.png" width="200"/>
+    <p>South Indian</p></li>
+</ul>
+<div class="light"></div>
    <br><br>
   <div class="foot"><p>Contact us on | 123456788</p></div>
 </body>
