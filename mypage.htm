@@ -152,57 +152,64 @@ background-image: url('wa3.png');
   position:relative;
 }
   
-  ul{
-  position:absolute;
-  margin:0;
-  padding:0;
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.list li {
+  flex: 1;
+}
+.list li a {
+  text-decoration: none;
+  color: inherit;
+  padding-top: 1rem;
+  display: block;
+  text-align: center;
+  overflow: hidden;
+  font-size: 40px;
+}
+.list li a span {
+  display: block;
+  background: rgba(0, 0, 0, 0.1);
+  padding: 0.5rem;
+  font-size: 22px;
+  margin-top: 1rem;
 }
 
-li{
-  text-align:center;
-  display:inline-block;
-  list-style:none;
-  position:relative;
-  border:solid 12px #fff;
-  background:#fff;
-  box-shadow:0 0 15px 0px #555;
-  transition:all 1s ease;
-  -o-transition:all 1s ease;
-  -moz-transition:all 1s ease;
-  -webkit-transition:all 1s ease;
-  top:50px;
+@media (hover: hover) {
+  .list li a span {
+    transform: translateY(100px);
+    transition: 0.2s;
+  }
+  .list:hover span {
+    transform: translateY(0);
+  }
+  .list li:nth-child(1) span {
+    transition-delay: 0.0s;
+  }
+  .list li:nth-child(2) span {
+    transition-delay: 0.05s;
+  }
+  .list li:nth-child(3) span {
+    transition-delay: 0.1s;
+  }
+  .list li:nth-child(4) span {
+    transition-delay: 0.15s;
+  }
+
+.list li:nth-child(1) {
+  background: #90CAF9;
 }
-
-
-li:hover{
-  top:0px;
-  opacity:0.5;
+.list li:nth-child(2) {
+  background: #80DEEA;
 }
-
-li:nth-child(1){
-    transform:rotate(0deg);
+.list li:nth-child(3) {
+  background: #A5D6A7;
 }
-
-li:nth-child(2){
-    transform:rotate(0deg);
-}
-
-
-p{
-  margin:-15px 0 0 0;
-}
-
-.light{
-  border-radius:50%;
-  position:absolute;
-  left:0;
-  right:0;
-  width:700px;
-  height:700px;
-  background:#fff;
-  filter:blur(100px);
-  opacity:0.3;
-  pointer-events:none;
+.list li:nth-child(4) {
+  background: #E6EE9C;
 }
 .foot {
   position: fixed;
@@ -282,13 +289,12 @@ function myFunction() {
   </div>
    <hr>
   <br><br>
- <ul>
-  <li><img src="china.png" style="float:left" width="20%" height="50">
-    <p style="font-family:cursive;font-size:1.5vw;">Continental</p></li>
-  <li><img src="south.png" style="float:right" width="20%" height="50"/>
-    <p style="font-family:cursive;font-size:1.5vw;">Desi</p></li>
+ <ul class="list">
+  <li><a href="#0">① <span>This</span></a></li>
+  <li><a href="#0">② <span>Little</span></a></li>
+  <li><a href="#0">③ <span>Piggy</span></a></li>
+  <li><a href="#0">④ <span>Went</span></a></li>
 </ul>
-<div class="light"></div>
    <br><br>
   <div class="foot"><p>Contact us on | 123456788</p></div>
 </body>
